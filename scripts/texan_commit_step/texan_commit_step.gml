@@ -1,5 +1,6 @@
 /// Flushes all queued texture groups, and then fetches texture groups one at a time (as directed by calling texan_flush() / texan_fetch() etc.)
 /// This function allows for Texan to fetch/flush texture groups over the span of multiple frames to prevent the game from locking up
+/// This function returns <true> when the fetch/flush queues have been fully processed, and <false> otherwise
 
 function texan_commit_step()
 {
