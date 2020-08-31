@@ -1,6 +1,6 @@
 <h1 align="center">Texan 1.0.0</h1>
 
-<p align="center">Texture group flush/fetch manager for GameMaker Studio 2</p>
+<p align="center">Texture group flush/fetch manager for GameMaker Studio 2.3</p>
 
 <p align="center"><b>@jujuadams</b></p>
 
