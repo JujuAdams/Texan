@@ -21,7 +21,7 @@ function TexanCommitStep()
     }
     
     var _t_outer = get_timer();
-    while(!ds_list_empty(global.__texanFlush) && (get_timer() - _t_outer < 1000))
+    while(!ds_list_empty(global.__texanFetch) && (get_timer() - _t_outer < 1000))
     {
         var _texture_group = global.__texanFetch[| 0];
         ds_list_delete(global.__texanFetch, 0);
@@ -39,7 +39,7 @@ function TexanCommitStep()
         }
     }
     
-    if (ds_list_empty(global.__texanFlush))
+    if (ds_list_empty(global.__texanFlush) && ds_list_empty(global.__texanFetch))
     {
         ds_list_copy(global.__texanFetch, global.__texanAlwaysFetch);
         return true;
