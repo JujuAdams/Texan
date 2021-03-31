@@ -1,4 +1,4 @@
-<h1 align="center">Texan 1.0.0 🤠</h1>
+<h1 align="center">Texan 2.0.0 🤠</h1>
 
 <p align="center">Texture group flush/fetch manager for GameMaker Studio 2.3</p>
 
