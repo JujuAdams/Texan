@@ -4,15 +4,15 @@
 /// @param sprite
 /// @param [sprite...]
 
-function texan_fetch_sprite()
+function TexanFetchSprite()
 {
     var _i = 0;
     repeat(argument_count)
     {
         var _sprite = argument[_i];
         
-        var _texture_group = global.__texan_sprite_to_texture_group[? _sprite];
-        if (_texture_group != undefined) texan_fetch(_texture_group);
+        var _texture_group = global.__texanSpriteToTextureGroup[? _sprite];
+        if (_texture_group != undefined) TexanFetch(_texture_group);
         
         ++_i;
     }

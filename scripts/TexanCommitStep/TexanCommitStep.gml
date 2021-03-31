@@ -2,46 +2,46 @@
 /// This function allows for Texan to fetch/flush texture groups over the span of multiple frames to prevent the game from locking up
 /// This function returns <true> when the fetch/flush queues have been fully processed, and <false> otherwise
 
-function texan_commit_step()
+function TexanCommitStep()
 {
-    if (TEXAN_DEBUG_LEVEL >= 1) __texan_trace("Performing a flush/fetch step");
+    if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Performing a flush/fetch step");
     
-    if (!ds_list_empty(global.__texan_flush))
+    if (!ds_list_empty(global.__texanFlush))
     {
         var _i = 0;
-        repeat(ds_list_size(global.__texan_flush))
+        repeat(ds_list_size(global.__texanFlush))
         {
-            var _texture_group = global.__texan_flush[| _i];
+            var _texture_group = global.__texanFlush[| _i];
             texture_flush(_texture_group);
-            if (TEXAN_DEBUG_LEVEL >= 1) __texan_trace("Flushed \"", _texture_group, "\"");
+            if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _texture_group, "\"");
             ++_i;
         }
         
-        ds_list_clear(global.__texan_flush);
+        ds_list_clear(global.__texanFlush);
     }
     
     var _t_outer = get_timer();
-    while(!ds_list_empty(global.__texan_flush) && (get_timer() - _t_outer < 1000))
+    while(!ds_list_empty(global.__texanFlush) && (get_timer() - _t_outer < 1000))
     {
-        var _texture_group = global.__texan_fetch[| 0];
-        ds_list_delete(global.__texan_fetch, 0);
+        var _texture_group = global.__texanFetch[| 0];
+        ds_list_delete(global.__texanFetch, 0);
         
         var _t = get_timer();
         texture_prefetch(_texture_group);
             
         if ((TEXAN_DEBUG_LEVEL >= 1) && (get_timer() - _t > 1000))
         {
-            __texan_trace("Fetched \"", _texture_group, "\"");
+            __TexanTrace("Fetched \"", _texture_group, "\"");
         }
         else if (TEXAN_DEBUG_LEVEL >= 2)
         {
-            __texan_trace("Fetched \"", _texture_group, "\" (but it was probably already loaded)");
+            __TexanTrace("Fetched \"", _texture_group, "\" (but it was probably already loaded)");
         }
     }
     
-    if (ds_list_empty(global.__texan_flush))
+    if (ds_list_empty(global.__texanFlush))
     {
-        ds_list_copy(global.__texan_fetch, global.__texan_always_fetch);
+        ds_list_copy(global.__texanFetch, global.__texanAlwaysFetch);
         return true;
     }
     else

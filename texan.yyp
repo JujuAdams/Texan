@@ -1,12 +1,13 @@
 {
   "resources": [
-    {"id":{"name":"texan_flush","path":"scripts/texan_flush/texan_flush.yy",},"order":3,},
-    {"id":{"name":"texan_commit_step","path":"scripts/texan_commit_step/texan_commit_step.yy",},"order":8,},
-    {"id":{"name":"texan_fetch_sprite","path":"scripts/texan_fetch_sprite/texan_fetch_sprite.yy",},"order":6,},
-    {"id":{"name":"texan_fetch","path":"scripts/texan_fetch/texan_fetch.yy",},"order":5,},
-    {"id":{"name":"texan_flush_all","path":"scripts/texan_flush_all/texan_flush_all.yy",},"order":4,},
-    {"id":{"name":"__texan_config","path":"scripts/__texan_config/__texan_config.yy",},"order":0,},
-    {"id":{"name":"texan_commit","path":"scripts/texan_commit/texan_commit.yy",},"order":7,},
+    {"id":{"name":"TexanFlush","path":"scripts/TexanFlush/TexanFlush.yy",},"order":2,},
+    {"id":{"name":"TexanCommitStep","path":"scripts/TexanCommitStep/TexanCommitStep.yy",},"order":8,},
+    {"id":{"name":"TexanFetchSprite","path":"scripts/TexanFetchSprite/TexanFetchSprite.yy",},"order":5,},
+    {"id":{"name":"TexanFetchAll","path":"scripts/TexanFetchAll/TexanFetchAll.yy",},"order":6,},
+    {"id":{"name":"TexanFetch","path":"scripts/TexanFetch/TexanFetch.yy",},"order":4,},
+    {"id":{"name":"TexanFlushAll","path":"scripts/TexanFlushAll/TexanFlushAll.yy",},"order":3,},
+    {"id":{"name":"__TexanConfig","path":"scripts/__TexanConfig/__TexanConfig.yy",},"order":0,},
+    {"id":{"name":"TexanCommit","path":"scripts/TexanCommit/TexanCommit.yy",},"order":7,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":1,},
   ],
   "Options": [
@@ -31,23 +32,23 @@
     "name": "Default",
     "children": [],
   },
-  "RoomOrder": [
-    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
+  "RoomOrderNodes": [
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Texan.yy","order":2,"resourceVersion":"1.0","name":"Texan","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
-    {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+    {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "23.1.1.175",
+    "IDEVersion": "2.3.1.542",
   },
-  "resourceVersion": "1.3",
+  "resourceVersion": "1.4",
   "name": "texan",
   "tags": [],
   "resourceType": "GMProject",

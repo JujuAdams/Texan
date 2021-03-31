@@ -6,7 +6,7 @@
     "path": "folders/Texan.yy",
   },
   "resourceVersion": "1.0",
-  "name": "texan_commit",
+  "name": "TexanFlush",
   "tags": [],
   "resourceType": "GMScript",
 }

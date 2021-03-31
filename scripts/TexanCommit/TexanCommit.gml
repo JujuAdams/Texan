@@ -1,12 +1,12 @@
 /// Flushes and fetches texture groups (as directed by calling texan_flush() / texan_fetch() etc.)
 /// The fetch and flush queues are cleared at the end of this function
 
-function texan_commit()
+function TexanCommit()
 {
-    while(!texan_commit_step()) {}
+    while(!TexanCommitStep()) {}
 }
 
-function texan_yeehaw()
+function TexanYeehaw()
 {
-    texan_commit();
+    TexanCommit();
 }
