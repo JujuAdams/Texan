@@ -28,8 +28,8 @@
 
 #region Internal System Stuff
 
-#macro __TEXAN_VERSION  "1.0.0"
-#macro __TEXAN_DATE     "2020-08-31"
+#macro __TEXAN_VERSION  "2.0.0"
+#macro __TEXAN_DATE     "2021-03-31"
 
 __TexanTrace("Welcome to Texan by @jujuadams! This is version ", __TEXAN_VERSION, ", ", __TEXAN_DATE);
 
