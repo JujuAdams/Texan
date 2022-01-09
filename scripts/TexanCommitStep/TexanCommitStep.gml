@@ -1,4 +1,4 @@
-/// Flushes all queued texture groups, and then fetches texture groups one at a time (as directed by calling texan_flush() / texan_fetch() etc.)
+/// Flushes all queued texture groups, and then fetches texture groups one at a time (as directed by calling TexanFlush() / TexanFetch() etc.)
 /// This function allows for Texan to fetch/flush texture groups over the span of multiple frames to prevent the game from locking up
 /// This function returns <true> when the fetch/flush queues have been fully processed, and <false> otherwise
 
@@ -39,13 +39,7 @@ function TexanCommitStep()
         }
     }
     
-    if (ds_list_empty(global.__texanFlush) && ds_list_empty(global.__texanFetch))
-    {
-        ds_list_copy(global.__texanFetch, global.__texanAlwaysFetch);
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    global.__texanComplete = (ds_list_empty(global.__texanFlush) && ds_list_empty(global.__texanFetch));
+    
+    return global.__texanComplete;
 }

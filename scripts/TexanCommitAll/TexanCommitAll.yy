@@ -6,7 +6,7 @@
     "path": "folders/Texan.yy",
   },
   "resourceVersion": "1.0",
-  "name": "TexanCommit",
+  "name": "TexanCommitAll",
   "tags": [],
   "resourceType": "GMScript",
 }
