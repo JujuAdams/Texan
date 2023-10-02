@@ -1,4 +1,5 @@
-<h1 align="center">Texan 2.1.0 🤠</h1>
+<p align="center"><img src="https://raw.githubusercontent.com/JujuAdams/Texan/master/LOGO.png" style="display:block; margin:auto; width:300px"></p>
+<h1 align="center">Texan 2.1.0</h1>
 
 <p align="center">Texture group flush/fetch manager for GameMaker Studio 2.3 by <a href="https://www.jujuadams.com/" target="_blank">Juju Adams</a></p>
 
