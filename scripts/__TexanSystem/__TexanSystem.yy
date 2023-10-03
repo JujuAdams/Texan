@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "__TexanSystem",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Texan",
-    "path": "folders/Texan.yy",
+    "name": "(System)",
+    "path": "folders/Texan/(System).yy",
   },
-  "resourceVersion": "1.0",
-  "name": "__TexanSystem",
-  "tags": [],
-  "resourceType": "GMScript",
 }

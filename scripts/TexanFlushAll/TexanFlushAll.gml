@@ -3,10 +3,12 @@
 
 function TexanFlushAll()
 {
+    static _global = __TexanInitialize();
+    
     var _i = 0;
-    repeat(ds_list_size(global.__texanTextureGroups))
+    repeat(ds_list_size(_global.__textureGroupArray))
     {
-        TexanFetch(global.__texanTextureGroups[| _i]);
+        TexanFetch(_global.__textureGroupArray[_i]);
         ++_i;
     }
 }

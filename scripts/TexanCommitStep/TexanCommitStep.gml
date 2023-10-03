@@ -4,42 +4,44 @@
 
 function TexanCommitStep()
 {
+    static _global = __TexanInitialize();
+    
     if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Performing a flush/fetch step");
     
-    if (!ds_list_empty(global.__texanFlush))
+    if (array_length(_global.__flushArray) > 0)
     {
         var _i = 0;
-        repeat(ds_list_size(global.__texanFlush))
+        repeat(ds_list_size(_global.__flushArray))
         {
-            var _texture_group = global.__texanFlush[| _i];
-            texture_flush(_texture_group);
-            if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _texture_group, "\"");
+            var _textureGroup = _global.__flushArray[| _i];
+            texture_flush(_textureGroup);
+            if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _textureGroup, "\"");
             ++_i;
         }
         
-        ds_list_clear(global.__texanFlush);
+        array_resize(_global.__flushArray, 0);
     }
     
-    var _t_outer = get_timer();
-    while(!ds_list_empty(global.__texanFetch) && (get_timer() - _t_outer < 1000))
+    var _timeOuter = get_timer();
+    while((array_length(_global.__fetchArray) > 0) && (get_timer() - _timeOuter < 1000))
     {
-        var _texture_group = global.__texanFetch[| 0];
-        ds_list_delete(global.__texanFetch, 0);
+        var _textureGroup = _global.__fetchArray[0];
+        array_delete(_global.__fetchArray, 0, 1);
         
-        var _t = get_timer();
-        texture_prefetch(_texture_group);
+        var _timeInner = get_timer();
+        texture_prefetch(_textureGroup);
             
-        if ((TEXAN_DEBUG_LEVEL >= 1) && (get_timer() - _t > 1000))
+        if ((TEXAN_DEBUG_LEVEL >= 1) && (get_timer() - _timeInner > 1000))
         {
-            __TexanTrace("Fetched \"", _texture_group, "\"");
+            __TexanTrace("Fetched \"", _textureGroup, "\"");
         }
         else if (TEXAN_DEBUG_LEVEL >= 2)
         {
-            __TexanTrace("Fetched \"", _texture_group, "\" (but it was probably already loaded)");
+            __TexanTrace("Fetched \"", _textureGroup, "\" (but it was probably already loaded)");
         }
     }
     
-    global.__texanComplete = (ds_list_empty(global.__texanFlush) && ds_list_empty(global.__texanFetch));
+    _global.__complete = ((array_length(_global.__flushArray) <= 0) && (array_length(_global.__fetchArray) <= 0));
     
-    return global.__texanComplete;
+    return _global.__complete;
 }

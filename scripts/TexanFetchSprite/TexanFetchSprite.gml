@@ -6,13 +6,15 @@
 
 function TexanFetchSprite()
 {
+    static _global = __TexanInitialize();
+    
     var _i = 0;
     repeat(argument_count)
     {
         var _sprite = argument[_i];
         
-        var _texture_group = global.__texanSpriteToTextureGroup[? _sprite];
-        if (_texture_group != undefined) TexanFetch(_texture_group);
+        var _textureGroup = _global.__spriteToTextureGroupDict[? _sprite];
+        if (_textureGroup != undefined) TexanFetch(_textureGroup);
         
         ++_i;
     }

@@ -2,5 +2,6 @@
 
 function TexanGetComplete()
 {
-    return global.__texanComplete;
+    static _global = __TexanInitialize();
+    return _global.__complete;
 }

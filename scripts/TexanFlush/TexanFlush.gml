@@ -6,26 +6,28 @@
 
 function TexanFlush()
 {
-    if (global.__texanComplete)
+    static _global = __TexanInitialize();
+    
+    if (_global.__complete)
     {
-        global.__texanComplete   = false;
-        global.__texanFetchCount = 0;
-        global.__texanFlushCount = 0;
+        _global.__complete   = false;
+        _global.__fetchCount = 0;
+        _global.__flushCount = 0;
     }
     
     var _i = 0;
     repeat(argument_count)
     {
-        var _texture_group = argument[_i];
+        var _textureGroup = argument[_i];
         
-        if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Trying to queue flush \"", _texture_group, "\"          ", debug_get_callstack());
+        if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Trying to queue flush \"", _textureGroup, "\"          ", debug_get_callstack());
         
-        if ((ds_list_find_index(global.__texanFetch, _texture_group) < 0)
-        &&  (ds_list_find_index(global.__texanFlush, _texture_group) < 0))
+        if ((__TexanArrayFindIndex(_global.__fetchArray, _textureGroup) == undefined)
+        &&  (__TexanArrayFindIndex(_global.__flushArray, _textureGroup) == undefined))
         {
-            if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued flush for \"", _texture_group, "\"");
-            ds_list_add(global.__texanFlush, argument[_i]);
-            global.__texanFlushCount++;
+            if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued flush for \"", _textureGroup, "\"");
+            array_push(_global.__flushArray, argument[_i]);
+            _global.__flushCount++;
         }
         
         ++_i;
