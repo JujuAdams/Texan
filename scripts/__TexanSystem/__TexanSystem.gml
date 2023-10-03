@@ -23,7 +23,7 @@ function __TexanInitialize()
     
     texture_debug_messages(TEXAN_GM_DEBUG_LEVEL);
     
-    //Add texture groups to our internal list
+    //Add texture groups to our internal array
     var _array = TEXAN_TEXTURE_GROUPS;
     var _i = 0;
     repeat(array_length(_array))
@@ -49,7 +49,7 @@ function __TexanInitialize()
         ++_i;
     }
 
-    //Add always-fetch textures to our internal list
+    //Add always-fetch textures to our internal array
     var _array = TEXAN_ALWAYS_FETCH;
     var _i = 0;
     repeat(array_length(_array))
@@ -59,7 +59,7 @@ function __TexanInitialize()
         if (__TexanArrayFindIndex(_global.__alwaysFetchArray, _textureGroup) < 0)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Texan: Always fetching \"", _textureGroup, "\"");
-            ds_list_add(_global.__alwaysFetchArray, _textureGroup);
+            array_push(_global.__alwaysFetchArray, _textureGroup);
             TexanFetch(_textureGroup);
         }
     

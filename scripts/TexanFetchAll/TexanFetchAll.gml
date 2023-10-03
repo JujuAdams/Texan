@@ -6,7 +6,7 @@ function TexanFetchAll()
     static _global = __TexanInitialize();
     
     var _i = 0;
-    repeat(ds_list_size(_global.__textureGroupArray))
+    repeat(array_length(_global.__textureGroupArray))
     {
         TexanFetch(_global.__textureGroupArray[| _i]);
         ++_i;

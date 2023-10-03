@@ -11,7 +11,7 @@ function TexanCommitStep()
     if (array_length(_global.__flushArray) > 0)
     {
         var _i = 0;
-        repeat(ds_list_size(_global.__flushArray))
+        repeat(array_length(_global.__flushArray))
         {
             var _textureGroup = _global.__flushArray[| _i];
             texture_flush(_textureGroup);
