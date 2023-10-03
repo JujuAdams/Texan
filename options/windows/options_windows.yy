@@ -4,7 +4,7 @@
   "name": "Windows",
   "option_windows_display_name": "Texan",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "2.2.0.0",
+  "option_windows_version": "2.2.1.0",
   "option_windows_company_info": "@jujuadams",
   "option_windows_product_info": "Texan",
   "option_windows_copyright_info": "@jujuadams (c) 2023",

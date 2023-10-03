@@ -1,6 +1,6 @@
 // Feather disable all
 
-#macro __TEXAN_VERSION  "2.2.0"
+#macro __TEXAN_VERSION  "2.2.1"
 #macro __TEXAN_DATE     "2023-10-03"
 
 __TexanInitialize();
