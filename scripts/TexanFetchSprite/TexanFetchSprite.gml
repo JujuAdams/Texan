@@ -15,8 +15,15 @@ function TexanFetchSprite()
     {
         var _sprite = argument[_i];
         
-        var _textureGroup = _global.__spriteToTextureGroupDict[? _sprite];
-        if (_textureGroup != undefined) TexanFetch(_textureGroup);
+        var _textureGroup = _global.__spriteToTextureGroupDict[$ _sprite];
+        if (_textureGroup == undefined)
+        {
+            if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Warning! Sprite ", _sprite, " (\"", sprite_get_name(_sprite), "\") not recognised. Perhaps its texture group has not been added to the TEXAN_TEXTURE_GROUPS array?");
+        }
+        else
+        {
+            TexanFetch(_textureGroup);
+        }
         
         ++_i;
     }

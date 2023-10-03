@@ -10,7 +10,7 @@ function TexanFetchAll()
     var _i = 0;
     repeat(array_length(_global.__textureGroupArray))
     {
-        TexanFetch(_global.__textureGroupArray[| _i]);
+        TexanFetch(_global.__textureGroupArray[_i]);
         ++_i;
     }
 }

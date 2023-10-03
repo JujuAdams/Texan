@@ -15,7 +15,7 @@ function TexanCommitStep()
         var _i = 0;
         repeat(array_length(_global.__flushArray))
         {
-            var _textureGroup = _global.__flushArray[| _i];
+            var _textureGroup = _global.__flushArray[_i];
             texture_flush(_textureGroup);
             if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _textureGroup, "\"");
             ++_i;
