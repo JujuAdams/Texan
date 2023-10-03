@@ -34,7 +34,7 @@ function __TexanInitialize()
     {
         var _textureGroup = _array[_i];
         
-        if (__TexanArrayFindIndex(_global.__textureGroupArray, _textureGroup) < 0)
+        if (__TexanArrayFindIndex(_global.__textureGroupArray, _textureGroup) == undefined)
         {
             if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Adding texture group \"", _textureGroup, "\"");
             array_push(_global.__textureGroupArray, _textureGroup);
@@ -60,7 +60,7 @@ function __TexanInitialize()
     {
         var _textureGroup = _array[_i];
     
-        if (__TexanArrayFindIndex(_global.__alwaysFetchArray, _textureGroup) < 0)
+        if (__TexanArrayFindIndex(_global.__alwaysFetchArray, _textureGroup) == undefined)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Texan: Always fetching \"", _textureGroup, "\"");
             array_push(_global.__alwaysFetchArray, _textureGroup);

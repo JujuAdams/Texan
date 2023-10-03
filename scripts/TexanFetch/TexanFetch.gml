@@ -34,7 +34,7 @@ function TexanFetch()
             _global.__flushCount--;
         }
         
-        if (__TexanArrayFindIndex(_global.__fetchArray, _textureGroup) < 0)
+        if (__TexanArrayFindIndex(_global.__fetchArray, _textureGroup) == undefined)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued fetch for \"", _textureGroup, "\"");
             array_push(_global.__fetchArray, _textureGroup);
