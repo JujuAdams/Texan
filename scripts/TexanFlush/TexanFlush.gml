@@ -17,6 +17,8 @@ function TexanFlush()
         _global.__flushCount = 0;
     }
     
+    __TexanCarryAcrossAlwaysFetch();
+    
     var _i = 0;
     repeat(argument_count)
     {

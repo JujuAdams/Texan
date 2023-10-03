@@ -15,6 +15,7 @@
     {"id":{"name":"TexanFetchAll","path":"scripts/TexanFetchAll/TexanFetchAll.yy",},"order":4,},
     {"id":{"name":"__TexanSystem","path":"scripts/__TexanSystem/__TexanSystem.yy",},"order":0,},
     {"id":{"name":"TexanFetch","path":"scripts/TexanFetch/TexanFetch.yy",},"order":2,},
+    {"id":{"name":"__TexanCarryAcrossAlwaysFetch","path":"scripts/__TexanCarryAcrossAlwaysFetch/__TexanCarryAcrossAlwaysFetch.yy",},"order":4,},
     {"id":{"name":"TexanFlushAll","path":"scripts/TexanFlushAll/TexanFlushAll.yy",},"order":1,},
     {"id":{"name":"__TexanConfig","path":"scripts/__TexanConfig/__TexanConfig.yy",},"order":0,},
     {"id":{"name":"TexanCommitAll","path":"scripts/TexanCommitAll/TexanCommitAll.yy",},"order":6,},
