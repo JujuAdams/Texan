@@ -1,3 +1,5 @@
+// Feather disable all
+
 //Array of texture groups in the game. I'd love for this to be automatic but GameMaker doesn't
 //give us that data at runtime...?!
 #macro TEXAN_TEXTURE_GROUPS  ["Default"]

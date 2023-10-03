@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// @param array
 /// @param index
 

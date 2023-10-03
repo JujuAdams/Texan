@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Queues the texture group associated with the given sprite to be fetched the next time TexanCommit() or TexanCommitStep() is called
 /// (If a texture group is queued to be both fetched and flushed then the flush command is ignored)
 ///

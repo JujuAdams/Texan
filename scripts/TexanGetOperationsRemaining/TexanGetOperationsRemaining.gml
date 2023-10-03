@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns the number of operations that have not been completed yet
 
 function TexanGetOperationsRemaining()

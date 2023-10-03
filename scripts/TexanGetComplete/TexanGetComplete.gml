@@ -1,3 +1,5 @@
+// Feather disable all
+
 /// Returns whether Texan has finished processing all of its queued operations
 
 function TexanGetComplete()
