@@ -23,6 +23,8 @@ function __TexanInitialize()
         __spriteToTextureGroupDict: {},
     };
     
+    if (GM_build_type == "run") global.Texan = _global;
+    
     texture_debug_messages(TEXAN_GM_DEBUG_LEVEL);
     
     //Add texture groups to our internal array
