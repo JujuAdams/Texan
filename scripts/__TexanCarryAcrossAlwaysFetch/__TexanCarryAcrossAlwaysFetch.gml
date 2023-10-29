@@ -2,6 +2,8 @@
 
 function __TexanCarryAcrossAlwaysFetch()
 {
+	static _global = __TexanInitialize();
+	
     if ((array_length(_global.__fetchArray) <= 0) && (array_length(_global.__alwaysFetchArray) >= 1))
     {
         array_copy(_global.__fetchArray, 0, _global.__alwaysFetchArray, 0, array_length(_global.__alwaysFetchArray));
