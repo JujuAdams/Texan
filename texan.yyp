@@ -22,7 +22,6 @@
     "IDEVersion": "2023.1100.0.425",
   },
   "resources": [
-    {"id":{"name":"__TexanArrayFindIndex","path":"scripts/__TexanArrayFindIndex/__TexanArrayFindIndex.yy",},},
     {"id":{"name":"__TexanTrace","path":"scripts/__TexanTrace/__TexanTrace.yy",},},
     {"id":{"name":"TexanFlush","path":"scripts/TexanFlush/TexanFlush.yy",},},
     {"id":{"name":"TexanCommitStep","path":"scripts/TexanCommitStep/TexanCommitStep.yy",},},

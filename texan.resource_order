@@ -1,7 +1,6 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
-    {"name":"__TexanArrayFindIndex","order":3,"path":"scripts/__TexanArrayFindIndex/__TexanArrayFindIndex.yy",},
     {"name":"__TexanTrace","order":1,"path":"scripts/__TexanTrace/__TexanTrace.yy",},
     {"name":"TexanCommitStep","order":5,"path":"scripts/TexanCommitStep/TexanCommitStep.yy",},
     {"name":"TexanGetOperationsRemaining","order":9,"path":"scripts/TexanGetOperationsRemaining/TexanGetOperationsRemaining.yy",},

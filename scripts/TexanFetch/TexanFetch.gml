@@ -26,15 +26,15 @@ function TexanFetch()
         
         if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Trying to queue fetch \"", _textureGroup, "\"          ", debug_get_callstack());
         
-        var _index = __TexanArrayFindIndex(_global.__flushArray, _textureGroup);
-        if (_index != undefined)
+        var _index = array_find_index(_global.__flushArray, _textureGroup);
+        if (_index >= 0)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Fetch collides with flush for \"", _textureGroup, "\", removing flush");
             array_delete(_global.__flushArray, _index, 1);
             _global.__flushCount--;
         }
         
-        if (__TexanArrayFindIndex(_global.__fetchArray, _textureGroup) == undefined)
+        if (array_find_index(_global.__fetchArray, _textureGroup) > 0)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued fetch for \"", _textureGroup, "\"");
             array_push(_global.__fetchArray, _textureGroup);
