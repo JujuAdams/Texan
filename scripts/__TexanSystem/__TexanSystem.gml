@@ -18,6 +18,7 @@ function __TexanInitialize()
         __fetchCount: 0,
         __flushArray: [],
         __fetchArray: [],
+        __fetchedArray: [],
         __alwaysFetchArray: [],
         __textureGroupArray: texturegroup_get_names(),
         __spriteToTextureGroupDict: {},
