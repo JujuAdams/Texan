@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "TexanCommitStep",
+  "name": "__TexanTrace",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "API",
-    "path": "folders/Texan/API.yy",
+    "name": "(System)",
+    "path": "folders/Texan/(System).yy",
   },
 }
