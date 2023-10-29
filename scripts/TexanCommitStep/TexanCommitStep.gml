@@ -16,7 +16,7 @@ function TexanCommitStep()
         repeat(array_length(_global.__flushArray))
         {
             var _textureGroup = _global.__flushArray[_i];
-            texture_flush(_textureGroup);
+            texturegroup_unload(_textureGroup);
             if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _textureGroup, "\"");
             
             var _index = array_find_index(_global.__fetchedArray, _textureGroup);
@@ -33,7 +33,7 @@ function TexanCommitStep()
     {
         var _textureGroup = _global.__fetchArray[0];
         
-        texture_prefetch(_textureGroup);
+        texturegroup_load(_textureGroup);
         array_delete(_global.__fetchArray, 0, 1);
         array_push(_global.__fetchedArray, _textureGroup);
         
