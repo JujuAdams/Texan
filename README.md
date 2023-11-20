@@ -11,7 +11,7 @@
 
 &nbsp;
 
-Managing texture fetches and texture flushes in GameMaker is pretty straight-forwards. However, you may have noticed some minor difficulties when trying to make your flush and fetch actions as smooth as possible. Texan helps you with this problem by automating the logic of texture manage,ent.
+Managing texture fetches and texture flushes in GameMaker is pretty straight-forwards. However, you may have noticed some minor difficulties when trying to make your flush and fetch actions as smooth as possible. Texan helps you with this problem by automating the logic of texture management.
 
 For example, let's say you have an open world game where you need two different sets of textures in two different rooms. There's a little bit of overlap between the two rooms - they share textures A and B - but there are also differences. Room 1 needs texture C, room 2 needs texture D. For the purposes of demonstration, let's say we're moving from room 1 to 2. This means we'll need to keep textures A and B, flush texture C, and fetch texture D.
 
