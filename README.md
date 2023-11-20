@@ -5,7 +5,7 @@
 
 <p align="center"><a href="https://github.com/JujuAdams/Texan/releases/">Download the .yymps</a></p>
 
-<p align="center">Chat about db on the <a href="https://discord.gg/7uyVURrT6P">Discord server</a></p>
+<p align="center">Chat about Texan on the <a href="https://discord.gg/7uyVURrT6P">Discord server</a></p>
 
 &nbsp;
 
