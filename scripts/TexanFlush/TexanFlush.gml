@@ -26,8 +26,8 @@ function TexanFlush()
         
         if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Trying to queue flush \"", _textureGroup, "\"          ", debug_get_callstack());
         
-        if ((__TexanArrayFindIndex(_global.__fetchArray, _textureGroup) == undefined)
-        &&  (__TexanArrayFindIndex(_global.__flushArray, _textureGroup) == undefined))
+        if ((array_find_index(_global.__fetchArray, _textureGroup) < 0)
+        &&  (array_find_index(_global.__flushArray, _textureGroup) < 0))
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued flush for \"", _textureGroup, "\"");
             array_push(_global.__flushArray, argument[_i]);

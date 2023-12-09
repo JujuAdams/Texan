@@ -16,8 +16,12 @@ function TexanCommitStep()
         repeat(array_length(_global.__flushArray))
         {
             var _textureGroup = _global.__flushArray[_i];
-            texture_flush(_textureGroup);
+            texturegroup_unload(_textureGroup);
             if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _textureGroup, "\"");
+            
+            var _index = array_find_index(_global.__fetchedArray, _textureGroup);
+            if (_index >= 0) array_delete(_global.__fetchedArray, _index, 1);
+            
             ++_i;
         }
         
@@ -28,22 +32,35 @@ function TexanCommitStep()
     while((array_length(_global.__fetchArray) > 0) && (get_timer() - _timeOuter < 1000))
     {
         var _textureGroup = _global.__fetchArray[0];
-        array_delete(_global.__fetchArray, 0, 1);
         
-        var _timeInner = get_timer();
-        texture_prefetch(_textureGroup);
-            
-        if ((TEXAN_DEBUG_LEVEL >= 1) && (get_timer() - _timeInner > 1000))
+        texturegroup_load(_textureGroup);
+        array_delete(_global.__fetchArray, 0, 1);
+        array_push(_global.__fetchedArray, _textureGroup);
+        
+        if ((TEXAN_DEBUG_LEVEL >= 1) && texture_is_ready(_textureGroup))
         {
             __TexanTrace("Fetched \"", _textureGroup, "\"");
         }
-        else if (TEXAN_DEBUG_LEVEL >= 2)
-        {
-            __TexanTrace("Fetched \"", _textureGroup, "\" (but it was probably already loaded)");
-        }
     }
     
-    _global.__complete = ((array_length(_global.__flushArray) <= 0) && (array_length(_global.__fetchArray) <= 0));
+    if (array_length(_global.__fetchArray) > 0)
+    {
+        _global.__complete = false;
+        return false;
+    }
     
-    return _global.__complete;
+    var _i = 0;
+    repeat(array_length(_global.__fetchedArray))
+    {
+        if (not texture_is_ready(_global.__fetchedArray[_i]))
+        {
+            _global.__complete = false;
+            return false;
+        }
+        
+        ++_i;
+    }
+    
+    _global.__complete = true;
+    return true;
 }
