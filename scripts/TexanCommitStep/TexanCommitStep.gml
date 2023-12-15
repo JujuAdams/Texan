@@ -19,7 +19,7 @@ function TexanCommitStep()
             texturegroup_unload(_textureGroup);
             if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _textureGroup, "\"");
             
-            var _index = array_find_index(_global.__fetchedArray, _textureGroup);
+            var _index = array_get_index(_global.__fetchedArray, _textureGroup);
             if (_index >= 0) array_delete(_global.__fetchedArray, _index, 1);
             
             ++_i;

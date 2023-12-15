@@ -26,7 +26,7 @@ function TexanFetch()
         
         if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Trying to queue fetch \"", _textureGroup, "\"          ", debug_get_callstack());
         
-        var _index = array_find_index(_global.__flushArray, _textureGroup);
+        var _index = array_get_index(_global.__flushArray, _textureGroup);
         if (_index >= 0)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Fetch collides with flush for \"", _textureGroup, "\", removing flush");
@@ -34,7 +34,7 @@ function TexanFetch()
             _global.__flushCount--;
         }
         
-        if (array_find_index(_global.__fetchArray, _textureGroup) > 0)
+        if (array_get_index(_global.__fetchArray, _textureGroup) > 0)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued fetch for \"", _textureGroup, "\"");
             array_push(_global.__fetchArray, _textureGroup);
