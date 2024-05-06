@@ -1,7 +1,7 @@
 // Feather disable all
 
-#macro __TEXAN_VERSION  "3.0.1"
-#macro __TEXAN_DATE     "2023-12-15"
+#macro __TEXAN_VERSION  "4.0.0"
+#macro __TEXAN_DATE     "2024-05-06"
 
 __TexanInitialize();
 
@@ -13,7 +13,7 @@ function __TexanInitialize()
     _global = {};
     if (GM_build_type == "run") global.Texan = _global;
     
-    texture_debug_messages(TEXAN_GM_DEBUG_LEVEL);
+    __TexanTrace("Welcome to Texan by Juju Adams! This is version ", __TEXAN_VERSION, ", ", __TEXAN_DATE);
     
     with(_global)
     {
