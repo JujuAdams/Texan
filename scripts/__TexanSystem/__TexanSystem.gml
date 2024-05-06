@@ -21,7 +21,6 @@ function __TexanInitialize()
         __fetchedArray: [],
         __alwaysFetchArray: [],
         __textureGroupArray: texturegroup_get_names(),
-        __spriteToTextureGroupDict: {},
         __textureGroupDynamicDict: {},
     };
     
@@ -40,19 +39,6 @@ function __TexanInitialize()
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("\"", _textureGroup, "\" is unloaded on boot, presuming it is a dynamic texture group");
             _global.__textureGroupDynamicDict[$ _textureGroup] = true;
-        }
-        
-        if (TEXAN_ENABLE_SPRITE_FETCHING)
-        {
-            var _sprites = texturegroup_get_sprites(_textureGroup);
-            var _s = 0;
-            repeat(array_length(_sprites))
-            {
-                var _sprite = _sprites[_s];
-                if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("\"", _textureGroup, "\" has sprite ", sprite_get_name(_sprite), " (", _sprite, ")");
-                _global.__spriteToTextureGroupDict[$ _sprite] = _textureGroup;
-                ++_s;
-            }
         }
         
         ++_i;

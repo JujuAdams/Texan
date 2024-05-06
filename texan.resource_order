@@ -9,7 +9,6 @@
     {"name":"TexanCommit","order":5,"path":"scripts/TexanCommit/TexanCommit.yy",},
     {"name":"TexanFetch","order":2,"path":"scripts/TexanFetch/TexanFetch.yy",},
     {"name":"TexanFetchAll","order":4,"path":"scripts/TexanFetchAll/TexanFetchAll.yy",},
-    {"name":"TexanFetchSprite","order":3,"path":"scripts/TexanFetchSprite/TexanFetchSprite.yy",},
     {"name":"TexanFlushAll","order":1,"path":"scripts/TexanFlushAll/TexanFlushAll.yy",},
     {"name":"TexanGetComplete","order":7,"path":"scripts/TexanGetComplete/TexanGetComplete.yy",},
     {"name":"TexanGetOperationsCount","order":8,"path":"scripts/TexanGetOperationsCount/TexanGetOperationsCount.yy",},

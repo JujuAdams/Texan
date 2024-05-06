@@ -19,7 +19,3 @@
 //  1 = Limited debug messages
 //  2 = Verbose debug messages
 #macro TEXAN_DEBUG_LEVEL  2
-
-//Whether to allow use of TexanFetchSprite(). Turning this feature on will make boot times longer
-//and will increase memory usage.
-#macro TEXAN_ENABLE_SPRITE_FETCHING  false

@@ -32,7 +32,6 @@
     {"id":{"name":"TexanCommit","path":"scripts/TexanCommit/TexanCommit.yy",},},
     {"id":{"name":"TexanFetch","path":"scripts/TexanFetch/TexanFetch.yy",},},
     {"id":{"name":"TexanFetchAll","path":"scripts/TexanFetchAll/TexanFetchAll.yy",},},
-    {"id":{"name":"TexanFetchSprite","path":"scripts/TexanFetchSprite/TexanFetchSprite.yy",},},
     {"id":{"name":"TexanFlush","path":"scripts/TexanFlush/TexanFlush.yy",},},
     {"id":{"name":"TexanFlushAll","path":"scripts/TexanFlushAll/TexanFlushAll.yy",},},
     {"id":{"name":"TexanGetComplete","path":"scripts/TexanGetComplete/TexanGetComplete.yy",},},
