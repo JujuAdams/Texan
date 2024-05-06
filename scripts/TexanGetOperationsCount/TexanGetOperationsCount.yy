@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "TexanGetOperationsCount",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "API",
-    "path": "folders/Texan/API.yy",
+  "$GMScript":"",
+  "%Name":"TexanGetOperationsCount",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TexanGetOperationsCount",
+  "parent":{
+    "name":"API",
+    "path":"folders/Texan/API.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

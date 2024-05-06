@@ -1,50 +1,52 @@
 {
-  "resourceType": "GMProject",
-  "resourceVersion": "1.7",
-  "name": "texan",
-  "AudioGroups": [
-    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
+  "$GMProject":"",
+  "%Name":"texan",
+  "AudioGroups":[
+    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
-  "configs": {
-    "children": [],
-    "name": "Default",
+  "configs":{
+    "children":[],
+    "name":"Default",
   },
-  "defaultScriptType": 1,
-  "Folders": [
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Texan","folderPath":"folders/Texan.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"(System)","folderPath":"folders/Texan/(System).yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"API","folderPath":"folders/Texan/API.yy",},
+  "defaultScriptType":1,
+  "Folders":[
+    {"$GMFolder":"","%Name":"Texan","folderPath":"folders/Texan.yy","name":"Texan","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"(System)","folderPath":"folders/Texan/(System).yy","name":"(System)","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"API","folderPath":"folders/Texan/API.yy","name":"API","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles": [],
-  "isEcma": false,
-  "LibraryEmitters": [],
-  "MetaData": {
-    "IDEVersion": "2023.1100.0.441",
+  "IncludedFiles":[],
+  "isEcma":false,
+  "LibraryEmitters":[],
+  "MetaData":{
+    "IDEVersion":"2023.1100.0.441",
   },
-  "resources": [
+  "name":"texan",
+  "resources":[
+    {"id":{"name":"oTest","path":"objects/oTest/oTest.yy",},},
+    {"id":{"name":"rMain","path":"rooms/rMain/rMain.yy",},},
+    {"id":{"name":"__TexanCarryAcrossAlwaysFetch","path":"scripts/__TexanCarryAcrossAlwaysFetch/__TexanCarryAcrossAlwaysFetch.yy",},},
+    {"id":{"name":"__TexanConfig","path":"scripts/__TexanConfig/__TexanConfig.yy",},},
+    {"id":{"name":"__TexanSystem","path":"scripts/__TexanSystem/__TexanSystem.yy",},},
     {"id":{"name":"__TexanTrace","path":"scripts/__TexanTrace/__TexanTrace.yy",},},
-    {"id":{"name":"TexanFlush","path":"scripts/TexanFlush/TexanFlush.yy",},},
+    {"id":{"name":"TexanCommitAll","path":"scripts/TexanCommitAll/TexanCommitAll.yy",},},
     {"id":{"name":"TexanCommitStep","path":"scripts/TexanCommitStep/TexanCommitStep.yy",},},
-    {"id":{"name":"TexanGetOperationsRemaining","path":"scripts/TexanGetOperationsRemaining/TexanGetOperationsRemaining.yy",},},
+    {"id":{"name":"TexanFetch","path":"scripts/TexanFetch/TexanFetch.yy",},},
+    {"id":{"name":"TexanFetchAll","path":"scripts/TexanFetchAll/TexanFetchAll.yy",},},
+    {"id":{"name":"TexanFetchSprite","path":"scripts/TexanFetchSprite/TexanFetchSprite.yy",},},
+    {"id":{"name":"TexanFlush","path":"scripts/TexanFlush/TexanFlush.yy",},},
+    {"id":{"name":"TexanFlushAll","path":"scripts/TexanFlushAll/TexanFlushAll.yy",},},
     {"id":{"name":"TexanGetComplete","path":"scripts/TexanGetComplete/TexanGetComplete.yy",},},
     {"id":{"name":"TexanGetOperationsCount","path":"scripts/TexanGetOperationsCount/TexanGetOperationsCount.yy",},},
-    {"id":{"name":"oTest","path":"objects/oTest/oTest.yy",},},
-    {"id":{"name":"TexanFetchSprite","path":"scripts/TexanFetchSprite/TexanFetchSprite.yy",},},
-    {"id":{"name":"TexanFetchAll","path":"scripts/TexanFetchAll/TexanFetchAll.yy",},},
-    {"id":{"name":"__TexanSystem","path":"scripts/__TexanSystem/__TexanSystem.yy",},},
-    {"id":{"name":"TexanFetch","path":"scripts/TexanFetch/TexanFetch.yy",},},
-    {"id":{"name":"__TexanCarryAcrossAlwaysFetch","path":"scripts/__TexanCarryAcrossAlwaysFetch/__TexanCarryAcrossAlwaysFetch.yy",},},
-    {"id":{"name":"TexanFlushAll","path":"scripts/TexanFlushAll/TexanFlushAll.yy",},},
-    {"id":{"name":"__TexanConfig","path":"scripts/__TexanConfig/__TexanConfig.yy",},},
-    {"id":{"name":"TexanCommitAll","path":"scripts/TexanCommitAll/TexanCommitAll.yy",},},
+    {"id":{"name":"TexanGetOperationsRemaining","path":"scripts/TexanGetOperationsRemaining/TexanGetOperationsRemaining.yy",},},
     {"id":{"name":"sprA","path":"sprites/sprA/sprA.yy",},},
-    {"id":{"name":"rMain","path":"rooms/rMain/rMain.yy",},},
   ],
-  "RoomOrderNodes": [
+  "resourceType":"GMProject",
+  "resourceVersion":"2.0",
+  "RoomOrderNodes":[
     {"roomId":{"name":"rMain","path":"rooms/rMain/rMain.yy",},},
   ],
-  "templateType": null,
-  "TextureGroups": [
-    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
+  "templateType":null,
+  "TextureGroups":[
+    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }

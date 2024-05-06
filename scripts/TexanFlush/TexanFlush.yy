@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "TexanFlush",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "API",
-    "path": "folders/Texan/API.yy",
+  "$GMScript":"",
+  "%Name":"TexanFlush",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TexanFlush",
+  "parent":{
+    "name":"API",
+    "path":"folders/Texan/API.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
