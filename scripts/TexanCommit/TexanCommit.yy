@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"TexanCommitAll",
+  "%Name":"TexanCommit",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"TexanCommitAll",
+  "name":"TexanCommit",
   "parent":{
     "name":"API",
     "path":"folders/Texan/API.yy",

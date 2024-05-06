@@ -1,7 +1,7 @@
 // Feather disable all
 
-/// Queues texture groups to be fetched the next time TexanCommit() or TexanCommitStep() are called
-/// (If a texture group is queued to be both fetched and flushed then the flush command is ignored)
+/// Queues texture groups to be fetched the next time TexanCommit() is called. If a texture group
+/// is queued to be both fetched and flushed then the flush command is ignored.
 ///
 /// @param textureGroup
 /// @param [textureGroup...]
@@ -34,7 +34,7 @@ function TexanFetch()
             _global.__flushCount--;
         }
         
-        if (array_get_index(_global.__fetchArray, _textureGroup) > 0)
+        if (array_get_index(_global.__fetchArray, _textureGroup) < 0)
         {
             if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Queued fetch for \"", _textureGroup, "\"");
             array_push(_global.__fetchArray, _textureGroup);
