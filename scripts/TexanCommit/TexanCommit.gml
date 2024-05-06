@@ -24,13 +24,19 @@ function TexanCommit()
             {
                 var _textureGroup = __flushArray[_i];
                 
-                if (__textureGroupDynamicDict[$ _textureGroup])
+                if (__textureGroupDynamicDict[$ string_lower(_textureGroup)])
                 {
                     texturegroup_unload(_textureGroup);
                 }
                 else
                 {
-                    texture_flush(_textureGroup);
+                    var _textureArray = texturegroup_get_textures(_textureGroup);
+                    var _j = 0;
+                    repeat(array_length(_textureArray))
+                    {
+                        texture_flush(_textureArray[_j]);
+                        ++_j;
+                    }
                 }
                 
                 if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Flushed \"", _textureGroup, "\"");
@@ -44,9 +50,10 @@ function TexanCommit()
             array_resize(__flushArray, 0);
         }
         
+        var _i = 0;
         repeat(array_length(__fetchArray))
         {
-            var _textureGroup = __fetchArray[0];
+            var _textureGroup = __fetchArray[_i];
             var _status = texturegroup_get_status(_textureGroup);
             
             if (__textureGroupDynamicDict[$ string_lower(_textureGroup)] && (_status == texturegroup_status_unloaded))
@@ -74,6 +81,7 @@ function TexanCommit()
             }
             
             array_push(__fetchedArray, _textureGroup);
+            ++_i;
         }
         
         array_resize(__fetchArray, 0);

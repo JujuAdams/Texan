@@ -1,6 +1,6 @@
 if (keyboard_check_pressed(ord("1")))
 {
-    TexanFetch("Default");
+    TexanFetch("tgTest");
 }
 
 if (keyboard_check_pressed(ord("2")))
@@ -10,7 +10,7 @@ if (keyboard_check_pressed(ord("2")))
 
 if (keyboard_check_pressed(ord("3")))
 {
-    TexanFlush("Default");
+    TexanFlush("tgTest");
 }
 
 if (keyboard_check_pressed(ord("4")))
