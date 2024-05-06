@@ -10,58 +10,56 @@ function __TexanInitialize()
     static _global = undefined;
     if (_global != undefined) return _global;
     
-    __TexanTrace("Welcome to Texan by @jujuadams! This is version ", __TEXAN_VERSION, ", ", __TEXAN_DATE);
-    
-    _global = {
-        __complete: false,
-        __flushCount: 0,
-        __fetchCount: 0,
-        __flushArray: [],
-        __fetchArray: [],
-        __fetchedArray: [],
-        __alwaysFetchArray: [],
-        __textureGroupArray: texturegroup_get_names(),
-        __textureGroupDynamicDict: {},
-    };
-    
+    _global = {};
     if (GM_build_type == "run") global.Texan = _global;
     
     texture_debug_messages(TEXAN_GM_DEBUG_LEVEL);
     
-    //Add texture groups to our internal array
-    var _array = _global.__textureGroupArray;
-    var _i = 0;
-    repeat(array_length(_array))
+    with(_global)
     {
-        var _textureGroup = _array[_i];
+        __complete                = false;
+        __flushArray              = [];
+        __fetchArray              = [];
+        __fetchedArray            = [];
+        __alwaysFetchArray        = [];
+        __textureGroupArray       = texturegroup_get_names();
+        __textureGroupDynamicDict = {};
         
-        if (texturegroup_get_status(_textureGroup) == texturegroup_status_unloaded)
+        texture_debug_messages(TEXAN_GM_DEBUG_LEVEL);
+        
+        //Add texture groups to our internal array
+        var _array = __textureGroupArray;
+        var _i = 0;
+        repeat(array_length(_array))
         {
-            if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("\"", _textureGroup, "\" is unloaded on boot, presuming it is a dynamic texture group");
-            _global.__textureGroupDynamicDict[$ _textureGroup] = true;
+            var _textureGroup = _array[_i];
+            if (texturegroup_get_status(_textureGroup) == texturegroup_status_unloaded)
+            {
+                if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("\"", _textureGroup, "\" is unloaded on boot, presuming it is a dynamic texture group");
+                __textureGroupDynamicDict[$ _textureGroup] = true;
+            }
+            
+            ++_i;
         }
         
-        ++_i;
-    }
-
-    //Add always-fetch textures to our internal array
-    var _dict = {};
-    var _array = TEXAN_ALWAYS_FETCH;
-    var _i = 0;
-    repeat(array_length(_array))
-    {
-        var _textureGroup = _array[_i];
-        
-        if (not variable_struct_exists(_dict, _textureGroup))
+        //Add always-fetch textures to our internal array
+        var _dict = {};
+        var _array = TEXAN_ALWAYS_FETCH;
+        var _i = 0;
+        repeat(array_length(_array))
         {
-            if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Texan: Always fetching \"", _textureGroup, "\"");
-            array_push(_global.__alwaysFetchArray, _textureGroup);
-            TexanFetch(_textureGroup);
+            var _textureGroup = _array[_i];
+            if (not variable_struct_exists(_dict, _textureGroup))
+            {
+                if (TEXAN_DEBUG_LEVEL >= 2) __TexanTrace("Texan: Always fetching \"", _textureGroup, "\"");
+                array_push(__alwaysFetchArray, _textureGroup);
+                TexanFetch(_textureGroup);
+            }
+            
+            ++_i;
         }
-        
-        ++_i;
     }
-
+    
     if (TEXAN_COMMIT_ON_BOOT) TexanYeehaw();
     
     return _global;

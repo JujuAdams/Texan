@@ -3,7 +3,6 @@
   "ResourceOrderSettings":[
     {"name":"oTest","order":1,"path":"objects/oTest/oTest.yy",},
     {"name":"rMain","order":2,"path":"rooms/rMain/rMain.yy",},
-    {"name":"__TexanCarryAcrossAlwaysFetch","order":3,"path":"scripts/__TexanCarryAcrossAlwaysFetch/__TexanCarryAcrossAlwaysFetch.yy",},
     {"name":"__TexanError","order":2,"path":"scripts/__TexanError/__TexanError.yy",},
     {"name":"__TexanTrace","order":1,"path":"scripts/__TexanTrace/__TexanTrace.yy",},
     {"name":"TexanCommit","order":5,"path":"scripts/TexanCommit/TexanCommit.yy",},
@@ -11,7 +10,6 @@
     {"name":"TexanFetchAll","order":4,"path":"scripts/TexanFetchAll/TexanFetchAll.yy",},
     {"name":"TexanFlushAll","order":1,"path":"scripts/TexanFlushAll/TexanFlushAll.yy",},
     {"name":"TexanGetComplete","order":7,"path":"scripts/TexanGetComplete/TexanGetComplete.yy",},
-    {"name":"TexanGetOperationsCount","order":8,"path":"scripts/TexanGetOperationsCount/TexanGetOperationsCount.yy",},
     {"name":"sprA","order":3,"path":"sprites/sprA/sprA.yy",},
     {"name":"sprB","order":4,"path":"sprites/sprB/sprB.yy",},
   ],

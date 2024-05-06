@@ -24,7 +24,6 @@
   "resources":[
     {"id":{"name":"oTest","path":"objects/oTest/oTest.yy",},},
     {"id":{"name":"rMain","path":"rooms/rMain/rMain.yy",},},
-    {"id":{"name":"__TexanCarryAcrossAlwaysFetch","path":"scripts/__TexanCarryAcrossAlwaysFetch/__TexanCarryAcrossAlwaysFetch.yy",},},
     {"id":{"name":"__TexanConfig","path":"scripts/__TexanConfig/__TexanConfig.yy",},},
     {"id":{"name":"__TexanError","path":"scripts/__TexanError/__TexanError.yy",},},
     {"id":{"name":"__TexanSystem","path":"scripts/__TexanSystem/__TexanSystem.yy",},},
@@ -35,7 +34,6 @@
     {"id":{"name":"TexanFlush","path":"scripts/TexanFlush/TexanFlush.yy",},},
     {"id":{"name":"TexanFlushAll","path":"scripts/TexanFlushAll/TexanFlushAll.yy",},},
     {"id":{"name":"TexanGetComplete","path":"scripts/TexanGetComplete/TexanGetComplete.yy",},},
-    {"id":{"name":"TexanGetOperationsCount","path":"scripts/TexanGetOperationsCount/TexanGetOperationsCount.yy",},},
     {"id":{"name":"sprA","path":"sprites/sprA/sprA.yy",},},
     {"id":{"name":"sprB","path":"sprites/sprB/sprB.yy",},},
   ],

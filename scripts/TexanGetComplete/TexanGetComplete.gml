@@ -21,6 +21,7 @@ function TexanGetComplete()
             ++_i;
         }
         
+        if (TEXAN_DEBUG_LEVEL >= 1) __TexanTrace("Fetches complete, marking as complete");
         __complete = true;
         return true;
     }
