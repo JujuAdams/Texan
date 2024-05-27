@@ -54,6 +54,12 @@ function TexanCommit()
         repeat(array_length(__fetchArray))
         {
             var _textureGroup = __fetchArray[_i];
+            if (_textureGroup == undefined)
+            {
+                ++_i;
+                continue;
+            }
+            
             var _status = texturegroup_get_status(_textureGroup);
             
             if (__textureGroupDynamicDict[$ string_lower(_textureGroup)] && (_status == texturegroup_status_unloaded))
