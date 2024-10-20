@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/JujuAdams/Texan/master/LOGO.png" style="display:block; margin:auto; width:300px"></p>
 <h1 align="center">Texan 4.0.0</h1>
-<p align="center">Texture group flush/fetch manager for GameMaker 2024.4 (and later)</p>
+<p align="center">Texture group flush/fetch manager for GameMaker 2024.4 (and later) (but doesn't support GMRT)</p>
 
 &nbsp;
 
